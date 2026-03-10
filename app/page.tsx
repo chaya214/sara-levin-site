@@ -34,10 +34,10 @@ export default function LandingPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-3xl md:text-5xl font-bold text-purple-900 mb-6 leading-tight"
           >
-            תפסיקי להיאבק, תתחילי להתחבר: <br className="hidden md:block" />
+            עבור נטפרי: <br className="hidden md:block" />
             <span className="text-purple-600">הדרך שלך להנקה נינוחה, שינה רצופה וביטחון מלא באימהות שלך.</span>
           </motion.h1>
-
+ {/* עבור נטפרי תפסיקי להיאבק, תתחילי להתחבר: */}
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
