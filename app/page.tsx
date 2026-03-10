@@ -9,15 +9,15 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans leading-relaxed overflow-hidden" dir="rtl">
-      
+
       {/* 1. Header & Hero */}
       <header className="relative bg-white pt-16 pb-24 px-6 border-b border-purple-100">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-purple-50 rounded-full opacity-50 pointer-events-none"></div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div 
-            initial={{ scale: 0 }} 
-            animate={{ scale: 1 }} 
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 0.5, type: "spring" }}
             className="flex justify-center mb-6"
           >
@@ -27,18 +27,18 @@ export default function LandingPage() {
               </div>
             </div>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-3xl md:text-5xl font-bold text-purple-900 mb-6 leading-tight"
           >
-            עבור נטפרי: <br className="hidden md:block" />
+            תפסיקי להיאבק, תתחילי להתחבר:
+            <br className="hidden md:block" />
             <span className="text-purple-600">הדרך שלך להנקה נינוחה, שינה רצופה וביטחון מלא באימהות שלך.</span>
           </motion.h1>
- {/* עבור נטפרי תפסיקי להיאבק, תתחילי להתחבר: */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -47,7 +47,7 @@ export default function LandingPage() {
             ליווי עוטף ומקצועי לאימהות בגישה רגישה ומותאמת אישית. המקום שבו הידע המקצועי פוגש את הלב שלך, כדי שכל רגע עם הבייבי יהיה בדיוק כמו שחלמת.
           </motion.p>
 
-          <motion.button 
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg flex items-center gap-3 mx-auto"
@@ -61,7 +61,7 @@ export default function LandingPage() {
       {/* 3. הצפת הכאב: אנימציות נכנסות מהצדדים */}
       <section className="py-20 px-6 bg-purple-50">
         <div className="max-w-3xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -69,14 +69,14 @@ export default function LandingPage() {
           >
             בואי נדבר רגע על מה שקורה באמת ב-3 לפנות בוקר...
           </motion.h2>
-          
+
           <div className="space-y-6 overflow-hidden p-4">
             {[
               "האם את מוצאת את עצמך מסתכלת על התינוק שלך ומרגישה דקירה של אשמה כי 'זה אמור להיות קל יותר'?",
               "האם הכאב הפיזי בהנקה גורם לך לחשוש מהפעם הבאה שהוא יתעורר?",
               "האם את מוצפת בעצות סותרות מכל כיוון ומרגישה שהקול הפנימי שלך פשוט הלך לאיבוד בתוך העייפות?"
             ].map((text, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 // הלוגיקה שמכניסה משמאל או מימין לסירוגין
                 initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }}
@@ -90,8 +90,8 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </div>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function LandingPage() {
       {/* 4. הפתרון */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -114,8 +114,8 @@ export default function LandingPage() {
           >
             השינוי מתחיל כאן
           </motion.h2>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -128,11 +128,11 @@ export default function LandingPage() {
             <p className="text-lg text-slate-600 mb-10">
               תשתחררי מהצורך "לשרוד" את היום. בייעוץ שלנו, נהפוך את הקושי ללמידה משותפת. תקבלי כלים פרקטיים לקרוא את הסימנים שלו, לפתור כאבים פיזיים ולהחזיר את השלווה הביתה.
             </p>
-            
+
             {/* כפתור וואטסאפ "נושם" */}
-            <motion.a 
-              href="https://wa.me/972587633059" 
-              target="_blank" 
+            <motion.a
+              href="https://wa.me/972587633059"
+              target="_blank"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ repeat: Infinity, duration: 2 }}
               className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-md transition-colors"
@@ -155,15 +155,15 @@ export default function LandingPage() {
               { t: "צ'ק-ליסט אישי", d: "את מקבלת סיכום ברור של מה עושים עכשיו, בלי לנחש." },
               { t: "גב לכל שאלה", d: "אני מלווה אותך בהודעות בשבועיים שאחרי, כדי לוודא שאת בדרך הנכונה." }
             ].map((item, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
                 className="flex gap-4"
               >
-                <div className="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold">{i+1}</div>
+                <div className="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold">{i + 1}</div>
                 <div>
                   <h3 className="font-bold text-xl mb-2">{item.t}</h3>
                   <p className="text-slate-600 leading-relaxed">{item.d}</p>
@@ -186,7 +186,7 @@ export default function LandingPage() {
               { q: "איך אני יודעת שיש לי מספיק חלב?", a: "זו השאלה הכי נפוצה! בפגישה שלנו נלמד בדיוק את הסימנים האובייקטיביים שירגיעו אותך ויעזרו לך לסמוך על הגוף שלך." },
               // { q: "זה יקר לי...", a: "כמה שווה לך לילה של שינה או יום בלי כאבים? הייעוץ חוסך פעמים רבות קנייה מיותרת של תמ"לים, משאבות יקרות ואביזרים שלא באמת פותרים את הבעיה." }
             ].map((faq, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -195,7 +195,7 @@ export default function LandingPage() {
                 className="bg-white p-6 rounded-2xl shadow-sm border border-purple-100 text-right"
               >
                 <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-purple-900">
-                  <HelpCircle className="text-purple-500 shrink-0" size={24}/> 
+                  <HelpCircle className="text-purple-500 shrink-0" size={24} />
                   {faq.q}
                 </h4>
                 <p className="text-slate-600 pr-8 leading-relaxed">
@@ -210,7 +210,7 @@ export default function LandingPage() {
       {/* 9. סגירה וטופס סופי */}
       <footer className="py-20 px-6 bg-white border-t border-purple-100">
         <div className="max-w-xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -219,31 +219,31 @@ export default function LandingPage() {
             בואי נהפוך את האימהות שלך לחוויה של ביטחון ושמחה
           </motion.h2>
           <p className="text-lg text-slate-600 mb-10">אל תחכי לעוד לילה של חוסר אונים. השאירי פרטים ואחזור אלייך בהקדם (כי אני יודעת שכל דקה חשובה לך):</p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="space-y-4"
           >
-            <input 
-              type="text" 
-              placeholder="שם מלא" 
-              className="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-400 outline-none text-right" 
+            <input
+              type="text"
+              placeholder="שם מלא"
+              className="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-400 outline-none text-right"
             />
-            <input 
-              type="tel" 
-              placeholder="מספר טלפון" 
-              className="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-400 outline-none text-right" 
+            <input
+              type="tel"
+              placeholder="מספר טלפון"
+              className="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-400 outline-none text-right"
             />
-            <textarea 
-              placeholder="מה הקושי העיקרי כרגע?" 
-              rows={3} 
+            <textarea
+              placeholder="מה הקושי העיקרי כרגע?"
+              rows={3}
               className="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-purple-400 outline-none text-right"
             ></textarea>
-            
-            <motion.button 
+
+            <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 rounded-xl text-xl shadow-lg shadow-purple-200 transition-colors mt-4"
